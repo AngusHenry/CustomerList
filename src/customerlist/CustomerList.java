@@ -6,8 +6,6 @@
 
 package customerlist;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
 import javax.swing.JOptionPane;
 /**
  *
@@ -21,42 +19,60 @@ public class CustomerList {
     public static void main(String[] args) throws IOException { 
         String place, name, postal, city, province, address, customer;
        Boolean end = false;
-       ArrayList <String> lines = new ArrayList();
         BufferedReader readFile = new BufferedReader(
         new FileReader("CustomerInfo.txt"));
         
     // Dispalys everything already in the file    
     while ((place = readFile.readLine()) != null) {
     System.out.println(place);
-    Collections.addAll (lines, place); 
-    System.out.println ("Array" + lines);
     }
+    
     readFile.close();
     PrintWriter fileOut = new PrintWriter(new FileWriter("CustomerInfo.txt", true));
     int i = 0;
+    customer = "";
+    
     while (end != true){
         name = JOptionPane.showInputDialog("What is the name of customer#" + (i + 1) + "?");
-        address = JOptionPane.showInputDialog ("What is the address of customer#" + (i + 1) + "?");
+        address = JOptionPane.showInputDialog ("What is the address of customer#" + (i + 1) + "?\n" 
+        + "If you do not know, enter NA");
+        if (address.equals("NA")){
+        customerMaker customerP1 = new customerMaker (name);  
+        customer += customerP1;
+        customer += "\n";
+        }
+        else {
         city = JOptionPane.showInputDialog ("What is the city of customer#" + (i + 1) + "?");
         province = JOptionPane.showInputDialog ("What is the province of customer#" + (i + 1) + "?");
-        postal = JOptionPane.showInputDialog ("What is the postal code of customer#" + (i + 1) + "?");
-        customer = "Name: " + name +"\n" 
-                + "Address:" + address + "\n"
-                + "City" + city +"\n"
-                + "Province" + province + "\n"
-                + "Postal Code" + postal + "\n";
+        postal = JOptionPane.showInputDialog ("What is the postal code of customer#" + (i + 1) + "?"); 
+        customerMaker customerP2 = new customerMaker (name, city, address, province, postal);
+        customer += customerP2;
+        customer += "\n";
+        } 
         i++;
-        // here be the problem i need so solve, it does not change end
         String theEnd;
-        theEnd = JOptionPane.showInputDialog("Is that all the customer? \n"
-        + "yes or no");
-       
-        if (theEnd == "yes"){
+        Boolean check = false;
+        
+        while (check == false){
+        theEnd = JOptionPane.showInputDialog("Is that all the customers? \n"
+        + "1 (Yes that is all the customers) or 0 (No, there are more customers)");
+       try{
+       if ("1".equals(theEnd)){
             end = true;
+            check = true;
             System.out.println ("here we are");
-        }
-        System.out.println (customer);       
+        }   
+       else if ("0".equals(theEnd)){
+           end = false;
+           check = true;
+       }
+       }
+       catch(NumberFormatException nfe){
+       System.out.println ("Did not provide a valid answer");
+       check = false;
+       }    
+       }
     }
-    }
-    
+     System.out.println (customer);
+    }   
 }
