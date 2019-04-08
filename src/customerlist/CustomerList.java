@@ -17,7 +17,8 @@ public class CustomerList {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException { 
-        String place, name, postal, city, province, address, customer;
+        String place, name, postal, city, province, address, customer; 
+        String question = "1";
        Boolean end = false;
         BufferedReader readFile = new BufferedReader(
         new FileReader("CustomerInfo.txt"));
@@ -36,7 +37,7 @@ public class CustomerList {
         name = JOptionPane.showInputDialog("What is the name of customer#" + (i + 1) + "?");
         address = JOptionPane.showInputDialog ("What is the address of customer#" + (i + 1) + "?\n" 
         + "If you do not know, enter NA");
-        if (address.equals("NA")){
+        if (address.equalsIgnoreCase("NA")){
         customerMaker customerP1 = new customerMaker (name);  
         customer += customerP1;
         customer += "\n";
@@ -73,6 +74,15 @@ public class CustomerList {
        }    
        }
     }
+     while (question.equals("1")){
+      question = JOptionPane.showInputDialog ("Is that enough customer or shallwe artificaly increase the amount?\n"
+     + "1(Yes, make more customers) 0(No, I have enough customers)");   
+      customerMaker customerP3 = new customerMaker ();
+      customer += customerP3;
+      customer += "\n";
+     }
+     System.out.println ("-----------------------------");
      System.out.println (customer);
+     
     }   
 }
