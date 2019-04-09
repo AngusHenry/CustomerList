@@ -15,6 +15,7 @@ public class CustomerList {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException { 
         String place, name, postal, city, province, address, customer; 
@@ -41,6 +42,8 @@ public class CustomerList {
         customerMaker customerP1 = new customerMaker (name);  
         customer += customerP1;
         customer += "\n";
+        customer+= "----------------------------------";
+        customer+= "\n";
         }
         else {
         city = JOptionPane.showInputDialog ("What is the city of customer#" + (i + 1) + "?");
@@ -49,6 +52,8 @@ public class CustomerList {
         customerMaker customerP2 = new customerMaker (name, city, address, province, postal);
         customer += customerP2;
         customer += "\n";
+        customer+= "----------------------------------";
+        customer+= "\n";
         } 
         i++;
         String theEnd;
@@ -61,7 +66,6 @@ public class CustomerList {
        if ("1".equals(theEnd)){
             end = true;
             check = true;
-            System.out.println ("here we are");
         }   
        else if ("0".equals(theEnd)){
            end = false;
@@ -74,15 +78,23 @@ public class CustomerList {
        }    
        }
     }
+    int q = 0;
      while (question.equals("1")){
       question = JOptionPane.showInputDialog ("Is that enough customer or shallwe artificaly increase the amount?\n"
      + "1(Yes, make more customers) 0(No, I have enough customers)");   
       customerMaker customerP3 = new customerMaker ();
       customer += customerP3;
       customer += "\n";
+      customer+= "----------------------------------";
+      customer+= "\n";
+      q++;
+      System.out.println(q);
      }
+     readFile.close();
      System.out.println ("-----------------------------");
      System.out.println (customer);
-     
+    PrintWriter fileIn = new PrintWriter(new FileWriter("CustomerInfo.txt", true)); 
+    fileIn.println (customer);
+    fileIn.close();
     }   
 }
