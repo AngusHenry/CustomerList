@@ -13,6 +13,9 @@ import java.util.ArrayList;
 public class customerMaker {
     
   private String Cname, Ccity, Caddress, Cprovince, Cpostcode;
+  /**
+   * This is the randomly generated customer
+   */
   public customerMaker (){
     ArrayList <String> nameran = new ArrayList();
         nameran.add("Randy Howard");
@@ -66,6 +69,10 @@ public class customerMaker {
        randomNum = (int)(Math.random() * nameran.size());
        Cpostcode = postran.get (randomNum);
   }
+  /**
+   * This customer is not know and will place "?" in place of of the address
+   * @param name 
+   */
     public customerMaker (String name){
         Cname = name;
         Ccity = "?";
@@ -73,6 +80,14 @@ public class customerMaker {
         Cprovince = "?";
         Cpostcode = "?";
     }
+    /**
+     * This program takes all information about the customer and makes the customer in full
+     * @param name
+     * @param add
+     * @param city
+     * @param pro
+     * @param post 
+     */
        public customerMaker (String name, String add, String city, String pro, String post){
         Cname = name;
         Ccity = city;
@@ -81,7 +96,10 @@ public class customerMaker {
         Cpostcode = post;
         
     }
-    
+    /**
+     * Here, we organize the information and prepare it to be printed and presented
+     * @return 
+     */
     public String toString() {
     String output = "Name: " + Cname + "\n";
     output += "Address: " + Caddress + "\n";
