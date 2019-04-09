@@ -17,7 +17,7 @@ public class customerMaker {
     ArrayList <String> nameran = new ArrayList();
         nameran.add("Randy Howard");
         nameran.add("Susie Clark");
-        nameran.add("Aleander Demitri");
+        nameran.add("Alexander Demitri");
         nameran.add("Josehpine Miller");
         nameran.add("Clark Muth");
         nameran.add("Sasha McDonald");
@@ -37,21 +37,21 @@ public class customerMaker {
         addran.add("95 Cromwell st, Unit 67");
         addran.add("1 First st");
         addran.add("78 Red drive");
-        addran.add("3.14 4th dimensional boulevard");
+        addran.add("3.14th dimensional boulevard");
     ArrayList <String> provinceran = new ArrayList(); 
         provinceran.add("Ontario");
-        provinceran.add("QuebeC");
+        provinceran.add("Quebec");
         provinceran.add("British Columbia");
         provinceran.add("Alberta");
         provinceran.add("Yukon");
         provinceran.add("Prince Edward Island");
-        provinceran.add("Maine (shhhh, don't tell the americans)");
+        provinceran.add("Maine (shhhh, don't tell the Americans)");
      ArrayList <String> postran = new ArrayList(); 
         postran.add("N6R9J2");
         postran.add("Q9G8M3");
         postran.add("S8G5K8");
         postran.add("B4M2G0");
-        postran.add("N9E7FJ8");
+        postran.add("N9E7F8");
         postran.add("V5W9H9");
         postran.add("A1B2C3");
     int randomNum;
@@ -86,7 +86,7 @@ public class customerMaker {
     String output = "Name: " + Cname + "\n";
     output += "Address: " + Caddress + "\n";
     output += "City: " + Ccity + "\n";
-    output += "Provicne: " + Cprovince + "\n";
+    output += "Province: " + Cprovince + "\n";
     output += "PostalCode: " + Cpostcode;
     //output string is complete, return it
     return output;
