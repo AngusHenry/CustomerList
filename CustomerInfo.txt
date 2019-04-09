@@ -1,62 +1,19 @@
 Start:
-Name: Angus Henry
-Address: Guelph
-City: 21 Oliver St
-Province: Ontario
-PostalCode: N1E3B6
+Name: Franklin does not exist
+Address: St. no place
+City: 1 not real st
+Province: Examplia
+Postal Code: Z0Y9W8
 ----------------------------------
 Name: Bob Bobington
-Address: Unknow
-City: Unknow
-Province: Unknow
-PostalCode: Unknow
+Address: ?
+City: ?
+Province: ?
+Postal Code: ?
 ----------------------------------
-Name: Josehpine Miller
+Name: Gary, Just Gary
 Address: 3.14th dimensional boulevard
-City: Regina
-Province: Ontario
-PostalCode: Q9G8M3
-----------------------------------
-Name: Sasha McDonald
-Address: 54 Franklin drive
-City: Vancouver
-Province: Prince Edward Island
-PostalCode: A1B2C3
-----------------------------------
-Name: Clark Muth
-Address: 5 Main st
-City: Regina
-Province: Alberta
-PostalCode: A1B2C3
-----------------------------------
-Name: Alexander Demitri
-Address: 54 Franklin drive
-City: Montreal
+City: Toronto
 Province: Maine (shhhh, don't tell the Americans)
-PostalCode: N9E7F8
+Postal Code: N6R9J2
 ----------------------------------
-Name: Gary, Just Gary
-Address: 54 Franklin drive
-City: Ottawa
-Province: Maine (shhhh, don't tell the Americans)
-PostalCode: N9E7F8
-----------------------------------
-Name: Alexander Demitri
-Address: 54 Franklin drive
-City: Vancouver
-Province: Alberta
-PostalCode: N6R9J2
-----------------------------------
-Name: Nick
-Address: funny remark
-City: who cares
-Province: stinky shoes
-PostalCode: 123456qwert
-----------------------------------
-Name: Gary, Just Gary
-Address: 1 First st
-City: Ottawa
-Province: Maine (shhhh, don't tell the Americans)
-PostalCode: Q9G8M3
-----------------------------------
-
