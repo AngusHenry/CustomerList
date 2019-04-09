@@ -68,10 +68,10 @@ public class customerMaker {
   }
     public customerMaker (String name){
         Cname = name;
-        Ccity = "Unknow";
-        Caddress = "Unknow";
-        Cprovince = "Unknow";
-        Cpostcode = "Unknow";
+        Ccity = "?";
+        Caddress = "?";
+        Cprovince = "?";
+        Cpostcode = "?";
     }
        public customerMaker (String name, String add, String city, String pro, String post){
         Cname = name;
@@ -87,7 +87,7 @@ public class customerMaker {
     output += "Address: " + Caddress + "\n";
     output += "City: " + Ccity + "\n";
     output += "Province: " + Cprovince + "\n";
-    output += "PostalCode: " + Cpostcode;
+    output += "Postal Code: " + Cpostcode;
     //output string is complete, return it
     return output;
     }
